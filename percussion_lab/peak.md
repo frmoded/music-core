@@ -1,6 +1,6 @@
 ---
 type: action
-inputs: []
+inputs: [bars]
 source_facet: description
 sync_state: stale-recipe
 description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
@@ -10,7 +10,7 @@ recipe_derived_from_description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3
 recipe_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
 python_derived_from_recipe_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 python_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
-recipe_version: 1
+recipe_version: 2
 ---
 
 # Description
@@ -26,7 +26,6 @@ loudest, fullest moment of the piece.
 - bars (default 4) — section length; cycles the 4-bar pattern
 
 # Recipe
-
 Let kp = Call [[play_at_offsets]] with instrument=[[kick]], offsets=[0, 1, 2, 3], duration=0.25, bars=bars, velocity="accent", mark_dynamics=True.
 Let sp = Call [[play_at_offsets]] with instrument=[[snare]], offsets=[0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75], duration=0.25, bars=bars, velocity="accent".
 Let ohp = Call [[play_at_offsets]] with instrument=[[open_hihat]], offsets=[0, 1, 2, 3], duration=0.25, bars=bars, velocity="accent".
