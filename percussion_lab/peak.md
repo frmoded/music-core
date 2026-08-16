@@ -4,13 +4,13 @@ inputs: [bars, kick_velocity, snare_velocity, hihat_velocity, hihat_offsets, oha
 source_facet: description
 sync_state: synced
 description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
-recipe_hash: e5fa2fed9d39d6de275a341d52c997d9c2df35c3ec369f9eff9419a6b5d4a627
+recipe_hash: 43755e3d370c21ff51a933465680897e58a088326139b183f800f848881d1262
 python_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 recipe_derived_from_description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
 recipe_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
 python_derived_from_recipe_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 python_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
-recipe_version: 4
+recipe_version: 5
 ---
 
 # Description
@@ -26,6 +26,7 @@ loudest, fullest moment of the piece.
 - bars (default 4) — section length; cycles the 4-bar pattern
 
 # Recipe
+Input bars: int = 4.
 Input kick_velocity: int | str = "accent".
 Input snare_velocity: int | str = "accent".
 Input hihat_velocity: int | str = "accent".
