@@ -4,13 +4,13 @@ inputs: [bars, kick_velocity, snare_velocity, hihat_velocity, ohat_velocity, lto
 source_facet: description
 sync_state: synced
 description_hash: 1faf036d728edb5324b7a46a8b96afeaee163005011007e11ce6f712946d4588
-recipe_hash: 47bc19ef9e9e4e26858885958acb93e0ab7af74d1ae5c90ad3a83313a6dbb7a4
+recipe_hash: d8de927d620b68138205f7056e798c51416599fe5643acb6f48dc24a942ae8e2
 python_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 recipe_derived_from_description_hash: 1faf036d728edb5324b7a46a8b96afeaee163005011007e11ce6f712946d4588
 recipe_derived_from_source_hash: 1faf036d728edb5324b7a46a8b96afeaee163005011007e11ce6f712946d4588
 python_derived_from_recipe_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 python_derived_from_source_hash: 1faf036d728edb5324b7a46a8b96afeaee163005011007e11ce6f712946d4588
-recipe_version: 3
+recipe_version: 4
 ---
 
 # Description
@@ -26,6 +26,7 @@ that slopes the section from `mf` down toward `mp`.
 - bars (default 4) — section length; cycles the asymmetric 4-bar kick
 
 # Recipe
+Input bars: int = 4.
 Input kick_velocity: int | str = "decrescendo".
 Input snare_velocity: int | str = "decrescendo".
 Input hihat_velocity: int | str = "decrescendo".
