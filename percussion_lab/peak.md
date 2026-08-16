@@ -1,16 +1,16 @@
 ---
 type: action
-inputs: [bars, kick_velocity, snare_velocity, hihat_velocity, ohat_velocity, ltom_velocity, mtom_velocity, crash_velocity]
+inputs: [bars, kick_velocity, snare_velocity, hihat_velocity, hihat_offsets, ohat_velocity, ltom_velocity, mtom_velocity, crash_velocity]
 source_facet: description
 sync_state: synced
 description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
-recipe_hash: af2d9d5c1c157f5f37c276ac9696aeccbb0c32f42e95eb337a33f39707f0a794
+recipe_hash: e5fa2fed9d39d6de275a341d52c997d9c2df35c3ec369f9eff9419a6b5d4a627
 python_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 recipe_derived_from_description_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
 recipe_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
 python_derived_from_recipe_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 python_derived_from_source_hash: 01ba027ecd12cc61f2ad7077db4217d039afa4b0a3db93ecb44aaa1e60a53cac
-recipe_version: 3
+recipe_version: 4
 ---
 
 # Description
@@ -28,14 +28,14 @@ loudest, fullest moment of the piece.
 # Recipe
 Input kick_velocity: int | str = "accent".
 Input snare_velocity: int | str = "accent".
-Input hihat_velocity: int | str | None = None.
+Input hihat_velocity: int | str = "accent".
+Input hihat_offsets: list = [].
 Input ohat_velocity: int | str = "accent".
 Input ltom_velocity: int | str = "accent".
 Input mtom_velocity: int | str = "accent".
 Input crash_velocity: int | str = "accent".
 Let kp = Call [[play_at_offsets]] with instrument=[[kick]], offsets=[0, 1, 2, 3], duration=0.25, bars=bars, velocity=kick_velocity, mark_dynamics=True.
 Let sp = Call [[play_at_offsets]] with instrument=[[snare]], offsets=[0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75], duration=0.25, bars=bars, velocity=snare_velocity.
-Let hihat_offsets = {{ [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75] if hihat_velocity is not None else [] }}.
 Let chp = Call [[play_at_offsets]] with instrument=[[closed_hihat]], offsets=hihat_offsets, duration=0.25, bars=bars, velocity=hihat_velocity.
 Let ohp = Call [[play_at_offsets]] with instrument=[[open_hihat]], offsets=[0, 1, 2, 3], duration=0.25, bars=bars, velocity=ohat_velocity.
 Let ltp = Call [[play_at_offsets]] with instrument=[[low_tom]], offsets=[0, 1, 2, 3], duration=0.25, bars=bars, velocity=ltom_velocity.
