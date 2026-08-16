@@ -4,13 +4,13 @@ inputs: [bars, kick_velocity, snare_velocity, hihat_velocity, ohat_velocity, lto
 source_facet: description
 sync_state: synced
 description_hash: 693ef4779486642d46bd867908c19eb09e66f453d6ff9ddf6852bdaa0036b67c
-recipe_hash: 86ef70de638b44b8519154818ff9830619202c1a0ab80e4d91b407255d70b908
+recipe_hash: 71b170e681dd31f4062f9385ca441793af1b7195e4944a6aabaa0ae62f38ca56
 python_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 recipe_derived_from_description_hash: 693ef4779486642d46bd867908c19eb09e66f453d6ff9ddf6852bdaa0036b67c
 recipe_derived_from_source_hash: 693ef4779486642d46bd867908c19eb09e66f453d6ff9ddf6852bdaa0036b67c
 python_derived_from_recipe_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 python_derived_from_source_hash: 693ef4779486642d46bd867908c19eb09e66f453d6ff9ddf6852bdaa0036b67c
-recipe_version: 3
+recipe_version: 4
 ---
 
 # Description
@@ -25,6 +25,7 @@ two-note phrase. Six voices active. `human` velocity profile (`mf` band).
 - bars (default 4) — section length
 
 # Recipe
+Input bars: int = 4.
 Input kick_velocity: int | str = "human".
 Input snare_velocity: int | str = "human".
 Input hihat_velocity: int | str = "human".
